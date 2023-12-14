@@ -16,5 +16,12 @@
         "psr-4": {
             "Keyur\\Sitemap\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Keyur\\Sitemap\\SitemapServiceProvider"
+            ]
+        }
     }
 }
