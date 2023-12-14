@@ -1,0 +1,20 @@
+{
+    "name": "keyur/sitemap",
+    "description": "this package will integrate sitemap by one command only.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Keyur Desai",
+            "email": "keyurdtridhyatech@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "Keyur\\Sitemap\\": "src/"
+        }
+    }
+}
