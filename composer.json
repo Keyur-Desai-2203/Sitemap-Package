@@ -21,7 +21,10 @@
         "laravel": {
             "providers": [
                 "Keyur\\Sitemap\\SitemapServiceProvider"
-            ]
+            ],
+            "config": {
+                "Keyur\\Sitemap\\": "config/"
+            }
         }
     }
 }
