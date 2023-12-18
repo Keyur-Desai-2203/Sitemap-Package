@@ -12,26 +12,26 @@ class SitemapServiceProvider extends ServiceProvider
     public function boot()
     {
         // Publishes the configuration file if needed
-        // $this->publishes([
-        //     __DIR__.'/config/sitemap.php' => config_path('sitemap.php'),
-        // ], 'config');
-
-        // if ($this->app->runningInConsole()) {
-        //     $this->commands([
-        //         GenerateSitemap::class,
-        //     ]);
-        // }
+        $this->publishes([
+            __DIR__.'/config/sitemap.php' => config_path('sitemap.php'),
+        ], 'config');
 
         if ($this->app->runningInConsole()) {
             $this->commands([
                 GenerateSitemap::class,
             ]);
-        } else {
-            Route::get('/sitemap', function () {
-                Artisan::call('sitemap:generate');
-                return response()->json(['message' => 'Sitemap generated successfully']);
-            });
         }
+
+        // if ($this->app->runningInConsole()) {
+        //     $this->commands([
+        //         GenerateSitemap::class,
+        //     ]);
+        // } else {
+        //     Route::get('/sitemap', function () {
+        //         Artisan::call('sitemap:generate');
+        //         return response()->json(['message' => 'Sitemap generated successfully']);
+        //     });
+        // }
     }
 
     public function register()
